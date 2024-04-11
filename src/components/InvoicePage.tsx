@@ -2,13 +2,12 @@ import { FC, useState, useEffect } from 'react'
 import { Invoice, ProductLine } from '../data/types'
 import { initialInvoice } from '../data/initialData'
 import EditableInput from './EditableInput'
-import Document from './Document'
-import Page from './Page'
 import View from './View'
 import Text from './Text'
-import { Font } from '@react-pdf/renderer'
+import { Font, Document as PdfDocument, Page as PdfPage } from '@react-pdf/renderer'
 import Download from './DownloadPDF'
 import { format } from 'date-fns/format'
+import compose from '../styles/compose'
 
 Font.register({
   family: 'Nunito',
@@ -26,6 +25,25 @@ interface Props {
   pdfMode?: boolean
   onChange?: (invoice: Invoice) => void
 }
+
+const Document = ({ pdfMode, children }: any) => {
+  return <>{pdfMode ? <PdfDocument>{children}</PdfDocument> : <>{children}</>}</>
+}
+
+const Page = ({ className, pdfMode, children }:any) => {
+  return (
+    <>
+      {pdfMode ? (
+        <PdfPage size="A4" style={compose('page ' + (className ? className : ''))}>
+          {children}
+        </PdfPage>
+      ) : (
+        <div className={'page ' + (className ? className : '')}>{children}</div>
+      )}
+    </>
+  )
+}
+
 
 const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
   const [invoice, setInvoice] = useState<Invoice>(data ? { ...data } : { ...initialInvoice })
