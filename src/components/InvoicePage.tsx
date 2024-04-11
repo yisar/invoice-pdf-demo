@@ -1,8 +1,7 @@
-import { FC, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Font, PDFDownloadLink, Document as PdfDocument, Page as PdfPage, Text as PdfText, View as PdfView } from '@react-pdf/renderer'
-import Download from './DownloadPDF'
 import { format } from 'date-fns/format'
-import compose from '../styles/compose'
+import compose from './compose'
 
 Font.register({
   family: 'Nunito',

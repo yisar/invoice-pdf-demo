@@ -1,11 +1,29 @@
-import { CSSClasses } from '../data/types'
+import ReactPDF from '@react-pdf/renderer'
+
+const compose = (classes: string): ReactPDF.Styles => {
+  const css: ReactPDF.Styles = {
+    //@ts-ignore
+    '@import': 'url(https://fonts.bunny.net/css?family=nunito:400,600)',
+  }
+
+  const classesArray: string[] = classes.replace(/\s+/g, ' ').split(' ')
+
+  classesArray.forEach((className) => {
+    if (typeof styles[className] !== undefined) {
+      Object.assign(css, styles[className])
+    }
+  })
+
+  return css
+}
+
 
 const colorDark = '#222'
 const colorDark2 = '#666'
 const colorGray = '#e3e3e3'
 const colorWhite = '#fff'
 
-const styles: CSSClasses = {
+const styles: any = {
   dark: {
     color: colorDark,
   },
@@ -141,4 +159,5 @@ const styles: CSSClasses = {
   },
 }
 
-export default styles
+
+export default compose
