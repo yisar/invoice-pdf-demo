@@ -1,0 +1,157 @@
+.app {
+    margin: 30px auto 50px auto;
+    width: 700px;
+}
+
+.dark {
+    color: #222;
+}
+
+.white {
+    color: #fff;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-dark {
+    background-color: #666;
+}
+
+.bg-gray {
+    background-color: #e3e3e3;
+}
+
+.bg-red {
+    background-color: #f03434;
+}
+
+.bg-green {
+    background-color: #26a65b;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+.text-small {
+    font-size: 12px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-30 {
+    font-size: 30px;
+}
+
+.fs-45 {
+    font-size: 45px;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.ml-30 {
+    margin-left: 30px;
+}
+
+.p-4-8 {
+    padding: 4px 8px;
+}
+
+.p-5 {
+    padding: 5px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.w-auto {
+    width: auto !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-55 {
+    width: 55%;
+}
+
+.w-45 {
+    width: 45%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-48 {
+    width: 48%;
+}
+
+.w-17 {
+    width: 17%;
+}
+
+.w-18 {
+    width: 18%;
+}
+
+.row {
+    position: relative;
+    border-bottom: 1px solid #e3e3e3;
+}
