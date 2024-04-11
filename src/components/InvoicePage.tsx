@@ -1,8 +1,7 @@
 import { FC, useState, useEffect } from 'react'
 import { Invoice, ProductLine } from '../data/types'
-import { initialInvoice, initialProductLine } from '../data/initialData'
+import { initialInvoice } from '../data/initialData'
 import EditableInput from './EditableInput'
-import EditableCalendarInput from './EditableCalendarInput'
 import Document from './Document'
 import Page from './Page'
 import View from './View'
@@ -228,9 +227,8 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
                 />
               </View>
               <View className="w-60" pdfMode={pdfMode}>
-                <EditableCalendarInput
+                <EditableInput
                   value={format(invoiceDate, dateFormat)}
-                  selected={invoiceDate}
                   onChange={(date) =>
                     handleChange(
                       'invoiceDate',
@@ -251,9 +249,8 @@ const InvoicePage: FC<Props> = ({ data, pdfMode, onChange }) => {
                 />
               </View>
               <View className="w-60" pdfMode={pdfMode}>
-                <EditableCalendarInput
+                <EditableInput
                   value={format(invoiceDueDate, dateFormat)}
-                  selected={invoiceDueDate}
                   onChange={(date) =>
                     handleChange(
                       'invoiceDueDate',
