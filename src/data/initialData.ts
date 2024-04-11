@@ -1,10 +1,5 @@
-import { ProductLine, Invoice } from './types'
+import { Invoice } from './types'
 
-export const initialProductLine: ProductLine = {
-  description: '',
-  quantity: '1',
-  rate: '0.00',
-}
 
 export const initialInvoice: Invoice = {
   title: 'INVOICE',
@@ -34,8 +29,6 @@ export const initialInvoice: Invoice = {
       quantity: '2',
       rate: '100.00',
     },
-    { ...initialProductLine },
-    { ...initialProductLine },
   ],
   subTotalLabel: 'Sub Total',
   taxLabel: 'Sale Tax (10%)',
