@@ -14,8 +14,6 @@ export const TProductLine = z.object({
 })
 
 export const TInvoice = z.object({
-  logo: z.string(),
-  logoWidth: z.number(),
   title: z.string(),
   companyName: z.string(),
   name: z.string(),
@@ -42,8 +40,6 @@ export const TInvoice = z.object({
   taxLabel: z.string(),
   totalLabel: z.string(),
   currency: z.string(),
-  notesLabel: z.string(),
-  notes: z.string(),
   termLabel: z.string(),
   term: z.string(),
 })

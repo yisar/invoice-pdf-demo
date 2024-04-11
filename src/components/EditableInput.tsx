@@ -16,13 +16,9 @@ const EditableInput: FC<Props> = ({ className, placeholder, value, onChange, pdf
       {pdfMode ? (
         <Text style={compose('span ' + (className ? className : ''))}>{value}</Text>
       ) : (
-        <input
-          type="text"
-          className={'input ' + (className ? className : '')}
-          placeholder={placeholder || ''}
-          value={value || ''}
-          onChange={onChange ? (e) => onChange(e.target.value) : undefined}
-        />
+        <div
+          className={'span ' + (className ? className : '')}
+        >{value}</div>
       )}
     </>
   )
